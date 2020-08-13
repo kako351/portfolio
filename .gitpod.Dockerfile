@@ -1,12 +1,12 @@
 FROM gitpod/workspace-full
 
 ENV FLUTTER_HOME=/home/gitpod/flutter \
-    FLUTTER_VERSION=v1.9.1+hotfix.6-stable
+    FLUTTER_VERSION=1.20.1-stable
 
 # Install dart
 USER root
 
-RUN sudo curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+RUN curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
     apt-get update && \
     apt-get -y install libpulse0 build-essential libkrb5-dev gcc make && \
     apt-get clean && \
